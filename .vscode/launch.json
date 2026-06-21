@@ -1,0 +1,40 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "cwd": "${workspaceRoot}",
+      "executable": "MDK-ARM/build/STM32_Xifeng/STM32_Xifeng.elf",
+      "name": "Debug with OpenOCD",
+      "request": "launch",
+      "type": "cortex-debug",
+      "servertype": "openocd",
+      "configFiles": [
+        "interface/cmsis-dap-v1.cfg",
+        "target/stm32g4x.cfg"
+      ],
+      "searchDir": [],
+      "runToEntryPoint": "main",
+      "svdFile": "C:\\Keil_v5\\ARM\\Pack\\Keil\\STM32G4xx_DFP\\1.2.0\\CMSIS\\SVD\\STM32G431xx.svd",
+      "showDevDebugOutput": "none"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "g:/code/STM32_Xifeng/APP",
+      "program": "g:/code/STM32_Xifeng/APP/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
